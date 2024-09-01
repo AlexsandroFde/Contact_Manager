@@ -1,0 +1,19 @@
+.input-group {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--white-light-overlay);
+    background-color: var(--white-very-light-overlay);
+    color: var(--white);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--vibrant-purple);
+}

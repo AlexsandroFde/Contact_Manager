@@ -1,0 +1,22 @@
+.contact-item .contact-icon {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-large);
+    margin-right: 10px;
+}
+
+.contact-item .contact-details {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-medium);
+    padding-left: 15px;
+}
+
+.contact-item .contact-name {
+    font-weight: bold;
+}
+
+.contact-item .contact-number {
+    font-size: var(--font-size-small);
+    color: var(--white);
+}

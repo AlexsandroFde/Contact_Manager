@@ -1,0 +1,9 @@
+@import url('../../global/variables.css');
+@import url('./partials/base/reset.css');
+@import url('./partials/base/typography.css');
+@import url('./partials/layout/container.css');
+@import url('./partials/layout/formSection.css');
+@import url('./partials/layout/contactList.css');
+@import url('./partials/components/buttons.css');
+@import url('./partials/components/contactItem.css');
+@import url('./partials/components/scrollbars.css');

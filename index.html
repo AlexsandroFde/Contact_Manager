@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda Telefônica</title>
+    <link rel="stylesheet" href="./css/pages/index/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <section class="form-section">
+            <h1>Lista Telefônica</h1>
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="name">Nome do Contato</label>
+                    <input type="text" id="name" placeholder="Insira o nome" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <label for="number">Número</label>
+                    <input type="tel" id="number" placeholder="(99) 9999-9999" autocomplete="off" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" maxlength="15" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Adicionar Contato</button>
+            </form>
+        </section>
+        <section class="contacts-section">
+            <h2>Meus Contatos</h2>
+            <ul id="contacts-list" class="contact-list"></ul>
+        </section>
+    </main>
+    <script src="./js/pages/index/main.js"></script>
+</body>
+</html>

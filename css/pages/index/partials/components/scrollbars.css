@@ -1,0 +1,8 @@
+.contact-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+    background: var(--white-to-dark-gray-gradient);
+    border-radius: 4px;
+}
