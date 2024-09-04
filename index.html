@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Editar Contato</h2>
+            <form id="edit-contact-form">
+                <div class="input-group">
+                    <label for="edit-name">Nome:</label>
+                    <input type="text" id="edit-name" name="edit-name" placeholder="Insira o nome" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <label for="edit-number">Telefone:</label>
+                    <input type="tel" id="edit-number" name="edit-number" placeholder="(99) 9999-9999" autocomplete="off" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" maxlength="15" required>
+                </div>
+                <button class="btn btn-primary" id="saveEditButton" type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
     <main class="container">
         <section class="form-section">
             <h1>Lista Telefônica</h1>

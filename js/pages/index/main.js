@@ -6,18 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
         contactList.notifyObservers(contactList.contacts);
 
         document.getElementById('contact-form').addEventListener('submit', (event) => {
-            formSubmission(contactList, event);
+            formSubmission(event);
         });
 
-        document.getElementById('contacts-list').addEventListener('click', (event) => {
-            deleteContact(contactList, event);
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(event) {
+                const input = event.target;
+                const formattedPhoneNumber = formatPhoneNumber(input.value);
+                input.value = formattedPhoneNumber;
+            });
         });
 
-        document.getElementById('number').addEventListener('input', function(event) {
-            const input = event.target;
-            const formattedPhoneNumber = formatPhoneNumber(input.value);
-            input.value = formattedPhoneNumber;
-        });
+        window.onclick = function(event) {
+            const modal = document.getElementById('editModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
     });
 });
 
@@ -25,7 +30,8 @@ function loadScripts(callback) {
     const PAGE_SCRIPTS = [
         'formatPhoneNumber.js',
         'deleteContact.js',
-        'formSubmission.js'
+        'formSubmission.js',
+        'openEditModal.js'
     ];
     const PAGE_MODULES = [
         'contactList/handlers/subject.js',

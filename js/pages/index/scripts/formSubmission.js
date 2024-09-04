@@ -1,4 +1,4 @@
-function formSubmission(contactList, event) {
+function formSubmission(event) {
     event.preventDefault();
 
     const nameInput = document.getElementById('name');
@@ -10,7 +10,9 @@ function formSubmission(contactList, event) {
             number: numberInput.value.trim()
         };
 
-        contactList.addContact(newContact);
+        document.dispatchEvent(new CustomEvent('addContact', { 
+            detail: { contact: newContact } 
+        }));
 
         nameInput.value = '';
         numberInput.value = '';

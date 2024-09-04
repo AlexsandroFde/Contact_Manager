@@ -1,6 +1,5 @@
 function formatPhoneNumber(phoneNumber) {
     phoneNumber = phoneNumber.replace(/\D/g, '');
-    console.log(phoneNumber);
     
     if (phoneNumber.length > 10) {
         phoneNumber = phoneNumber.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');

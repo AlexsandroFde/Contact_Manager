@@ -1,6 +1,7 @@
-function deleteContact(contactList, event) {
-    if (event.target.closest('.delete-btn')) {
-        const contactIndex = event.target.closest('.delete-btn').dataset.index;
-        contactList.deleteContact(contactIndex);
-    }
+function deleteContact(event) {
+    event.stopPropagation()
+    const contactIndex = event.target.closest('.delete-btn').dataset.index;
+    document.dispatchEvent(new CustomEvent('deleteContact', { 
+        detail: { index: contactIndex } 
+    }));
 }
